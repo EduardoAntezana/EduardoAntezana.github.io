@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pablo motos quejas - Registro</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header class="bg-primary text-white text-center py-4">
+        <h1>FORMULARIO DE OFENSAS  REDES SOCIALES</h1>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#registro">REGISTRARME</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="acercade.html">Acerca de Nosotros</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="container my-5">
+        <section id="registro" class="card p-4">
+            <h2 class="text-center">Registro de ofendidos</h2>
+            <form action="procesamiento.php" method="post">
+                <fieldset class="form-group">
+                    <legend>Datos Personales</legend>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ingrese su nombre" required>
+
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" class="form-control" placeholder="Ingrese su apellido" required>
+
+                    <p>Sexo:</p>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="genero" id="hombre" value="hombre" required>
+                        <label class="form-check-label" for="hombre">Hombre</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="genero" id="mujer" value="mujer" required>
+                        <label class="form-check-label" for="mujer">Mujer</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="genero" id="otro" value="otro" required>
+                        <label class="form-check-label" for="otro">Otro</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="genero" id="taza" value="taza" required>
+                        <label class="form-check-label" for="taza">Taza</label>
+                    </div>
+                    <hr>
+
+                    <label for="fecha">Fecha de la ofensa:</label>
+                    <input type="date" id="fecha" name="fecha" class="form-control" required>
+
+                    <label for="ofensa">¿Que lo ofendio?:</label>
+
+                    <select id="ofendio" name="ofendio" class="form-control">
+                        <option value="meme">meme</option>
+                        <option value="imagen">imagen</option>
+                        <option value="video">video</option>
+                        <option value="enlace">enlace</option>
+                        <option value="pensar">alguien no piensa como usted</option>
+                    </select>
+                    <hr>
+
+                    <textarea id="ofensa" name="ofensa" class="form-control" rows="4" placeholder="Ingrese el detalle de la ofensa"></textarea>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <legend>Datos Generales </legend>
+                    <label for="superacion">¿Lloro?:</label>
+                    <select id="superacion" name="superacion" class="form-control">
+                        <option value="si">si</option>
+                        <option value="no">no</option>
+                        <option value="tal vez">mucho</option>
+                    </select>
+
+                    <label for="sentir">¿Que le hizo sentir?:</label>
+                    <input type="text" id="sentir" name="sentir" class="form-control" placeholder="Ingrese que sintio en el momento" required>
+
+                    <label for="superar">¿Lo va  a superar ?:</label>
+                    <select id="superar" name="superar" class="form-control">
+                        <option value="si">si</option>
+                        <option value="no">no</option>
+                        <option value="talvez"> tal vez con terapia</option>
+                        
+                    </select>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <legend>Datos Extras</legend>
+                    <p>¿Es su primera ofensa?:</p>
+                    <div class="form-check">
+                        <input type="radio" id="si" name="operaciones" value="si" class="form-check-input" required>
+                        <label class="form-check-label" for="si">Sí</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" id="no" name="operaciones" value="no" class="form-check-input" required>
+                        <label class="form-check-label" for="no">No</label>
+                    </div>
+
+                    <p>Motivos por los cuales se ofendio:</p>
+                    <div class="form-check">
+                        <input type="checkbox" name="idiota" value="idiota" class="form-check-input">
+                        <label class="form-check-label" for="idiota">soy un idiota</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" name="encontra" value="encontra" class="form-check-input">
+                        <label class="form-check-label" for="encontra">todos estan en mi contra</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" name="ocurrio" value="ocurrio" class="form-check-input">
+                        <label class="form-check-label" for="ocurrio">no se me ocurrio a mi</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" name="estalkenado" value="estalkenado" class="form-check-input">
+                        <label class="form-check-label" for="estalkenado">estaba estalkenado</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" name="religion" value="religion" class="form-check-input">
+                        <label class="form-check-label" for="religion">religion</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" name="complejo" value="complejo" class="form-check-input">
+                        <label class="form-check-label" for="complejo">tengo mucho complejos</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" name="pablo" value="pablo" class="form-check-input">
+                        <label class="form-check-label" for="pablo">SOY PABLO MOTOS</label>
+                    </div>
+                    <p>¿Como podemos mejorar las redes para su confort?:</p>
+                    <div class="form-check">
+                        <input type="checkbox" name="adn" value="adn" class="form-check-input">
+                        <label class="form-check-label" for="adn">haciendo pruebas de adn</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" name="normal" value="normal" class="form-check-input">
+                        <label class="form-check-label" for="normal">aceptando a gente  normal como usted</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input type="checkbox" name="normas" value="normas" class="form-check-input">
+                        <label class="form-check-label" for="normas">las normas de la comunidad las dicte usted y solo usted dependiendo de su estado de animo</label>
+                    </div>
+
+                </fieldset>
+
+                <button type="submit" class="btn btn-primary">Registrar</button>
+                <button type="reset" class="btn btn-secondary">Cancelar</button>
+            </form>
+        </section>
+    </main>
+
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>Nombres: Eduardo Antezana Jau / Leonel Fernando Carreaño  - Materia: Programación Web 1 - Grupo: B</p>
+    </footer>
+
+    <!-- scripts sacados de   de  bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- validacion  script  en js -->
+    <script>
+        document.querySelector("form").addEventListener("submit", function(event) {
+            const nombre = document.getElementById("nombre").value;
+            const apellido = document.getElementById("apellido").value;
+            const sangre = document.getElementById("sangre").value;
+            if (nombre === "" || apellido === "" || sangre === "") {
+                alert("Por favor complete todos los campos obligatorios.");
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
