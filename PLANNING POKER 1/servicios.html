@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <main class="container my-5">
+
+        <section class="text-center mb-5">
+            <h1 class="display-5 text-primary">Nuestros Servicios</h1>
+            <p class="lead">Ofrecemos una variedad de servicios de alta calidad para satisfacer tus necesidades. Descubre cómo podemos ayudarte.</p>
+        </section>
+
+        <section class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card shadow">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">Servicio 1</h5>
+                        <p class="card-text">Descripción breve del servicio 1 que ofrece una idea rápida del valor y los beneficios.</p>
+                        <button onclick="mostrarInfo('Servicio 1')" class="btn btn-primary w-100">Más Información</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow">
+            
+                    <div class="card-body">
+                        <h5 class="card-title">Servicio 2</h5>
+                        <p class="card-text">Descripción breve del servicio 2 que ofrece una idea rápida del valor y los beneficios.</p>
+                        <button onclick="mostrarInfo('Servicio 2')" class="btn btn-primary w-100">Más Información</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow">
+ 
+                    <div class="card-body">
+                        <h5 class="card-title">Servicio 3</h5>
+                        <p class="card-text">Descripción breve del servicio 3 que ofrece una idea rápida del valor y los beneficios.</p>
+                        <button onclick="mostrarInfo('Servicio 3')" class="btn btn-primary w-100">Más Información</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function mostrarInfo(servicio) {
+            alert("Más información sobre " + servicio + ": Aquí encontrarás detalles adicionales sobre este servicio.");
+        }
+    </script>
+</body>
+
+</html>
